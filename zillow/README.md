@@ -8,7 +8,7 @@ How to add new manifests:
     ``` 
     curl -sLO https://github.com/knative/serving/releases/download/knative-v1.7.4/serving-core.yaml
     ```
-4. Make sure the downloaded content is exactly the same.
+4. Make sure the downloaded content is exactly the same, with commands in the following example.
     ```
     diff <(curl -sL https://github.com/knative/serving/releases/download/knative-v1.7.4/serving-core.yaml) <(cat serving-core.yaml)
     ```
@@ -16,7 +16,7 @@ How to add new manifests:
 
 
 For reviewers:
-1. Make sure manifest content is exactly the same as upstream
+1. Make sure manifest content is exactly the same as upstream, with commands in the following example.
     ```
     diff <(curl -sL https://github.com/knative/serving/releases/download/knative-v1.7.4/serving-core.yaml) <(curl -s https://raw.githubusercontent.com/zillow/serving/zillow/manifests/zillow/serving-core/v1.7.4/serving-core.yaml)
     ```
